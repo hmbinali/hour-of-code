@@ -1,0 +1,37 @@
+[
+    {
+        "id": 101,
+        "name": "Riya",
+        "email": "riya@example.com",
+        "location": "Delhi",
+        "is_active": true
+    },
+    {
+        "id": 102,
+        "name": "Aman",
+        "email": "aman@example.com",
+        "location": "Mumbai",
+        "is_active": false
+    },
+    {
+        "id": 103,
+        "name": "Ali",
+        "email": "ali@example.com",
+        "location": "New York",
+        "is_active": true
+    },
+    {
+        "id": 104,
+        "name": "Aman",
+        "email": "aman@example.com",
+        "location": "Mumbai",
+        "is_active": false
+    },
+    {
+        "id": 105,
+        "name": "Riya",
+        "email": "riya@example.com",
+        "location": "Delhi",
+        "is_active": true
+    }
+]
