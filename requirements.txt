@@ -15,6 +15,7 @@ cycler==0.12.1
 debugpy @ file:///croot/debugpy_1736267418885/work
 decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
 executing @ file:///opt/conda/conda-bld/executing_1646925071911/work
+Flask==3.1.1
 fonttools==4.59.0
 gitdb==4.0.12
 GitPython==3.1.44
