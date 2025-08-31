@@ -1,0 +1,14 @@
+streamlit
+pandas
+numpy
+matplotlib
+scikit-learn
+Flask
+fastapi[standard]
+requests
+pillow
+PyMuPDF
+python-dateutil
+beautifulsoup4
+ipykernel
+ipython
