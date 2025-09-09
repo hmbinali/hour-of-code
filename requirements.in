@@ -10,5 +10,10 @@ pillow
 PyMuPDF
 python-dateutil
 beautifulsoup4
+asyncpg
+sqlmodel
+alembic
+pydantic-settings
+passlib
 ipykernel
 ipython
