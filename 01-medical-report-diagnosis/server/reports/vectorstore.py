@@ -17,7 +17,7 @@ load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_ENV = os.getenv("PINECONE_ENV", "us-east-1")
-PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "rbac-diagnosis-index")
+PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME", "mdr-rag-index")
 UPLOAD_DIR = os.getenv("UPLOAD_DIR", "./uploaded_reports")
 
 os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
