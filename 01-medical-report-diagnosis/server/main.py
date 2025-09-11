@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from .auth.route import router as auth_router
+from .reports.route import router as reports_router
 
 
 app = FastAPI(
@@ -10,3 +11,4 @@ app = FastAPI(
 )
 
 app.include_router(auth_router)
+app.include_router(reports_router)
