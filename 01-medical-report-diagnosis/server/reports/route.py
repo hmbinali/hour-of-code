@@ -13,7 +13,7 @@ router = APIRouter(prefix="/reports", tags=["reports"])
 async def upload_reports(
     user=Depends(authenticate), files: List[UploadFile] = File(...)
 ):
-    if user["role"] != "Patient":
+    if user["role"] != "patient":
         raise HTTPException(
             status_code=403, detail="Only patients can upload reports for diagnosis"
         )

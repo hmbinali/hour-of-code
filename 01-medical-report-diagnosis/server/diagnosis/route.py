@@ -20,13 +20,13 @@ async def diagnose(
         raise HTTPException(status_code=404, detail="Report not found")
 
     # patient can only access
-    if user["role"] == "Patient" and report["uploader"] != user["username"]:
+    if user["role"] == "patient" and report["uploader"] != user["username"]:
         raise HTTPException(
             status_code=406, detail="You cannot access another patient's report"
         )
 
     # is user is patient and want diagnosis from his own report
-    if user["role"] == "Patient":
+    if user["role"] == "patient":
         result = await diagnosis_report(user["username"], doc_id, question)
 
         diagnosis_collection.insert_one(
@@ -43,7 +43,7 @@ async def diagnose(
         return result
 
     # if the user is doctor or other, then they can't ask for diagnosis
-    if user["role"] in ["Doctor", "Admin"]:
+    if user["role"] in ["doctor", "admin"]:
         raise HTTPException(
             status_code=407,
             detail="Only patients can ask for diagnosis with this endpoint",
@@ -55,7 +55,7 @@ async def diagnose(
 @router.get("/by_patient_name")
 async def get_patient_diagnosis(patient_name: str, user=Depends(authenticate)):
     # Only doctors can view a patient's diagnosis
-    if user["role"] != "Doctor":
+    if user["role"] != "doctor":
         raise HTTPException(
             status_code=403, detail="Only doctors can access this endpoint"
         )
